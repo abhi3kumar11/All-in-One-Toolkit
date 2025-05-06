@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One Toolkit | Free Online Image, Utility & QR Tools</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A comprehensive suite of free online tools including Photo to PDF, Image Converter, Compressor, Resizer, Age Calculator, Unit Converter, and QR Code Generator & Scanner.">
+    <meta name="keywords" content="online tools, free tools, image converter, pdf converter, image compressor, image resizer, age calculator, unit converter, qr code generator, qr scanner, web toolkit">
+    <meta name="author" content="ABHISHEK KUMAR">
+    <link rel="canonical" href="https://your-website-domain.com/"> <!-- URGENT TODO: Replace 'https://your-website-domain.com/' with your actual website domain! -->
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-domain.com/"> <!-- URGENT TODO: Replace 'https://your-website-domain.com/' with your actual domain! -->
+    <meta property="og:title" content="All-in-One Toolkit | Free Online Image, Utility & QR Tools">
+    <meta property="og:description" content="Free online tools for image manipulation, utility calculations, and QR code management.">
+    <meta property="og:image" content="https://your-website-domain.com/path-to-your-social-preview-image.jpg"> <!-- URGENT TODO: Add a real URL to your social media preview image (e.g., logo/banner)! -->
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-website-domain.com/"> <!-- URGENT TODO: Replace 'https://your-website-domain.com/' with your actual domain! -->
+    <meta property="twitter:title" content="All-in-One Toolkit | Free Online Image, Utility & QR Tools">
+    <meta property="twitter:description" content="Free online tools for image manipulation, utility calculations, and QR code management.">
+    <meta property="twitter:image" content="https://your-website-domain.com/path-to-your-social-preview-image.jpg"> <!-- URGENT TODO: Add a real URL to your social media preview image (e.g., logo/banner)! -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tools me-2" aria-hidden="true"></i>All-in-One Toolkit
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#image-tools"><i class="fas fa-image me-1" aria-hidden="true"></i> Image Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#utility-tools"><i class="fas fa-calculator me-1" aria-hidden="true"></i> Utilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#qr-tools"><i class="fas fa-qrcode me-1" aria-hidden="true"></i> QR Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle me-1" aria-hidden="true"></i> About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-3">
+        <!-- Hero Section -->
+        <section class="hero-section text-center mb-5 py-5 rounded-3">
+            <h1 class="display-4 fw-bold">All-in-One Toolkit</h1>
+            <p class="lead">Convert, compress, calculate and more with our free online tools</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#image-tools" class="btn btn-primary btn-lg px-4">Image Tools</a>
+                <a href="#utility-tools" class="btn btn-secondary btn-lg px-4">Utilities</a>
+                <a href="#qr-tools" class="btn btn-success btn-lg px-4">QR Generator</a>
+            </div>
+        </section>
+
+        <!-- Image Tools Section -->
+        <section id="image-tools" class="mb-5">
+            <h2 class="text-center mb-4 section-title"><i class="fas fa-image me-2" aria-hidden="true"></i>Image Tools</h2>
+            <div class="row">
+                <!-- Photo to PDF -->
+                <div class="col-md-3 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-file-pdf me-2" aria-hidden="true"></i>Photo to PDF</h5>
+                            <input type="file" id="photo-to-pdf" accept="image/*" class="form-control mb-3">
+                            <div class="d-grid">
+                                <button id="photo-to-pdf-btn" class="btn btn-primary">
+                                    <i class="fas fa-exchange-alt me-2" aria-hidden="true"></i>Convert to PDF
+                                </button>
+                            </div>
+                            <div id="pdf-preview" class="mt-3 text-center"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Converter -->
+                <div class="col-md-3 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-exchange-alt me-2" aria-hidden="true"></i>Image Converter</h5>
+                            <input type="file" id="image-input" accept="image/*" class="form-control mb-2">
+                            <select id="target-format" class="form-select mb-3">
+                                <option value="jpg">JPG</option>
+                                <option value="png">PNG</option>
+                                <option value="webp">WEBP</option>
+                                <option value="bmp">BMP</option>
+                            </select>
+                            <div class="d-grid">
+                                <button id="image-convert-btn" class="btn btn-primary">
+                                    <i class="fas fa-file-export me-2" aria-hidden="true"></i>Convert Image
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Compressor -->
+                <div class="col-md-3 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-compress-alt me-2" aria-hidden="true"></i>Image Compressor</h5>
+                            <input type="file" id="compress-input" accept="image/*" class="form-control mb-2">
+                            <div class="mb-3">
+                                <label for="quality-range" class="form-label">
+                                    Quality: <span id="quality-value">70</span>%
+                                </label>
+                                <input type="range" class="form-range" id="quality-range" min="1" max="100" value="70">
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary compress-btn">
+                                    <i class="fas fa-file-download me-2" aria-hidden="true"></i>Compress Image
+                                </button>
+                            </div>
+                            <div id="compression-info" class="mt-2 small text-muted"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Resizer -->
+                <div class="col-md-3 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-crop-alt me-2" aria-hidden="true"></i>Image Resizer</h5>
+                            <input type="file" id="resize-input" accept="image/*" class="form-control mb-2">
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <label for="resize-width" class="form-label small mb-1">Width (px)</label>
+                                    <input type="number" id="resize-width" class="form-control form-control-sm" placeholder="Auto">
+                                </div>
+                                <div class="col">
+                                    <label for="resize-height" class="form-label small mb-1">Height (px)</label>
+                                    <input type="number" id="resize-height" class="form-control form-control-sm" placeholder="Auto">
+                                </div>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="aspect-ratio-lock" checked>
+                                <label class="form-check-label small" for="aspect-ratio-lock">
+                                    Maintain aspect ratio
+                                </label>
+                            </div>
+                            <div class="d-grid">
+                                <button id="resize-image-btn" class="btn btn-primary">
+                                    <i class="fas fa-expand-arrows-alt me-2" aria-hidden="true"></i>Resize Image
+                                </button>
+                                
+                            </div>
+                            <div id="resize-info" class="mt-2 small text-muted text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utility Tools Section -->
+        <section id="utility-tools" class="mb-5">
+            <h2 class="text-center mb-4 section-title"><i class="fas fa-tools me-2" aria-hidden="true"></i>Utility Tools</h2>
+            <div class="row">
+                <!-- Age Calculator -->
+                <div class="col-md-6 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-birthday-cake me-2" aria-hidden="true"></i>Age Calculator</h5>
+                            <div class="mb-3">
+                                <label for="birth-date" class="form-label">Date of Birth</label>
+                                <input type="date" id="birth-date" class="form-control">
+                            </div>
+                            <div class="d-grid">
+                                <button id="calculate-age" class="btn btn-primary">
+                                    <i class="fas fa-calculator me-2" aria-hidden="true"></i>Calculate Age
+                                </button>
+                            </div>
+                            <div id="age-result" class="mt-3 fs-5 text-center"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Unit Converter -->
+                <div class="col-md-6 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-balance-scale me-2" aria-hidden="true"></i>Unit Converter</h5>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <input type="number" id="unit-value" class="form-control" placeholder="Value">
+                                </div>
+                                <div class="col-md-7">
+                                    <select id="unit-type" class="form-select">
+                                        <option value="length">Length</option>
+                                        <option value="weight">Weight</option>
+                                        <option value="temperature">Temperature</option>
+                                        <option value="area">Area</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3" id="unit-options"></div>
+                            <div id="unit-result" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR Tools Section -->
+        <section id="qr-tools" class="mb-5">
+            <h2 class="text-center mb-4 section-title"><i class="fas fa-qrcode me-2" aria-hidden="true"></i>QR Tools</h2>
+            <div class="row">
+                <!-- QR Code Generator -->
+                <div class="col-md-6 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-qrcode me-2" aria-hidden="true"></i>QR Code Generator</h5>
+                            <div class="mb-3">
+                                <label for="qr-text" class="form-label">Text/URL to encode</label>
+                                <input type="text" id="qr-text" class="form-control" placeholder="Enter text or URL">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="qr-size" class="form-label">Size</label>
+                                    <select id="qr-size" class="form-select">
+                                        <option value="100">100x100</option>
+                                        <option value="200" selected>200x200</option>
+                                        <option value="300">300x300</option>
+                                        <option value="400">400x400</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="qr-color" class="form-label">Color</label>
+                                    <input type="color" id="qr-color" value="#000000" class="form-control form-control-color">
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button id="generate-qr" class="btn btn-primary">
+                                    <i class="fas fa-bolt me-2" aria-hidden="true"></i>Generate QR Code
+                                </button>
+                            </div>
+                            <div class="text-center mt-3">
+                                <div id="qr-result"></div>
+                                <a id="download-qr" class="btn btn-success mt-2 d-none">
+                                    <i class="fas fa-download me-2" aria-hidden="true"></i>Download QR Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- QR Code Scanner -->
+                <div class="col-md-6 mb-4">
+                    <div class="card tool-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-camera me-2" aria-hidden="true"></i>QR Code Scanner</h5>
+                            <div class="mb-3">
+                                <label class="form-label">Scan QR Code</label>
+                                <div id="qr-scanner" class="scanner-container"></div>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex">
+                                <button id="start-scanner" class="btn btn-primary">
+                                    <i class="fas fa-play me-2" aria-hidden="true"></i>Start Scanner
+                                </button>
+                                <button id="stop-scanner" class="btn btn-danger d-none">
+                                    <i class="fas fa-stop me-2" aria-hidden="true"></i>Stop Scanner
+                                </button>
+                                <button id="upload-qr" class="btn btn-secondary">
+                                    <i class="fas fa-upload me-2" aria-hidden="true"></i>Upload Image
+                                    <input type="file" id="qr-upload" accept="image/*" class="d-none">
+                                </button>
+                            </div>
+                            <div id="scan-result" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-center mb-4 section-title"><i class="fas fa-info-circle me-2" aria-hidden="true"></i>About All-in-One Toolkit  </h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-lightbulb me-2" aria-hidden="true"></i>Our Mission</h4>
+                            <p>To provide free, easy-to-use online tools that help people with their daily digital tasks without requiring technical knowledge or software installation.</p>
+                            
+                            <h4 class="mt-4"><i class="fas fa-shield-alt me-2" aria-hidden="true"></i>Privacy Policy</h4>
+                            <p>All file processing happens in your browser. We don't store your files on our servers, ensuring your data remains private and secure.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i class="fas fa-tools me-2" aria-hidden="true"></i>Available Tools</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-file-pdf me-3 text-primary" aria-hidden="true"></i>
+                                    Photo to PDF Converter
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-exchange-alt me-3 text-success" aria-hidden="true"></i>
+                                    Image Format Converter
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-compress-alt me-3 text-info" aria-hidden="true"></i>
+                                    Image Compressor
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-crop-alt me-3 text-secondary" aria-hidden="true"></i>
+                                    Image Resizer
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-qrcode me-3 text-warning" aria-hidden="true"></i>
+                                    QR Code Generator & Scanner
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <i class="fas fa-calculator me-3 text-danger" aria-hidden="true"></i>
+                                    Age Calculator & Unit Converter
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <h5><i class="fas fa-tools me-2" aria-hidden="true"></i> All-in-One Toolkit  </h5>
+                    <p class="mb-0">Free online tools for your everyday needs</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3" aria-label="Visit our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Visit our Facebook page"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Join us on Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                    <p class="mb-0 mt-2">&copy; <span id="current-year">2025</span> All-in-One Toolkit . All rights reserved.</p>
+                    <p class="mb-0 mt-2">
+                        <a href="https://www.linkedin.com/in/abhi3kumar11/" class="text-white text-decoration-none"> Website Developer : ABHISHEK KUMAR </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Dynamically set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "All-in-One Toolkit",
+      "url": "https://your-website-domain.com/", <!-- URGENT TODO: Replace 'https://your-website-domain.com/' with your actual website domain! -->
+      "description": "A comprehensive suite of free online tools including Photo to PDF, Image Converter, Compressor, Resizer, Age Calculator, Unit Converter, and QR Code Generator & Scanner.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://your-website-domain.com/?s={search_term_string}", <!-- URGENT TODO: Replace with your site search URL or remove 'potentialAction' if no site search. -->
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</body>
+</html>
